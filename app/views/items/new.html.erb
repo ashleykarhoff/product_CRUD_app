@@ -1,0 +1,24 @@
+<h1>Create new item</h1>
+
+<%= form_with model: @item do |form|%>
+    <%= form.label "Item Name:"%>
+    <%= form.text_field :name %><br>
+
+    <%= form.label "Brand:"%>
+    <%= form.text_field :brand %><br>
+
+    <%= form.label "Price:"%>
+    <%= form.text_field :price %><br>
+
+    <%= form.label "Category:"%>
+
+    <%# Iterate through product categories and create dropdown menu %>
+    <% categories = [] %>
+    <% @categories.each do |cat| %>
+        <% categories << cat.id %>
+    <% end %>
+
+    <%= form.select :category_id, categories %><br>
+
+    <%= form.submit "Create New Item" %>
+<% end %>
