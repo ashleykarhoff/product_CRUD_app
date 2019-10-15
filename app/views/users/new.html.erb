@@ -1,7 +1,8 @@
+<h1>✨Create a New User ✨</h1>
 <%= form_with model: @user do |form| %>
     <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name %><br>
     <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
-    <%= form.submit %>
+    <%= form.text_field :last_name %><br>
+    <%= form.submit "Create"%><br>
 <% end %>

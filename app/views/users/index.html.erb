@@ -1,3 +1,5 @@
+<h1>💁‍♀️ All Users 🥰</h1>
+<h3><%= link_to "Add A New User", new_user_path %></h3>
 <% @users.each do |user| %>
     <div><%= link_to user.first_name, user_path(user) %></div>
 <% end %>
